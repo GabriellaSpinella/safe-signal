@@ -3,7 +3,6 @@ import { SafeAreaView, View, Text, StyleSheet } from 'react-native';
 import { useVideoPlayer, VideoView } from 'expo-video';
 import { colors, typography, spacing } from '../theme/theme';
 
-// Vídeo de exemplo — troque por um vídeo real do exercício (local ou remoto).
 const PLACEHOLDER_VIDEO =
   'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4';
 

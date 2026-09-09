@@ -6,7 +6,7 @@ import { colors, radius, typography } from '../theme/theme';
 import { scaleWidth } from '../theme/responsive';
 
 export default function ExerciseCard({ exercise, onPress }) {
-  // Se a foto real falhar ao carregar (ex: sem internet), volta pro pictograma.
+  
   const [imageFailed, setImageFailed] = useState(false);
   const showPhoto = exercise.image && !imageFailed;
 

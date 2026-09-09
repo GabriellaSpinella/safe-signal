@@ -5,7 +5,6 @@ import ExerciseCard from '../components/ExerciseCard';
 import { WEEK_DAYS, getExercisesForDay } from '../data/exercises';
 import { colors, radius, typography, spacing } from '../theme/theme';
 
-// Mapeia a chave interna do dia (ex: "terca") para o nome da rota no navigator
 const DAY_KEY_TO_ROUTE = {
   domingo: 'Domingo',
   segunda: 'Segunda',
