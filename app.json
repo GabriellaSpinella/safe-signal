@@ -19,6 +19,22 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-video",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "O SafeSignal usa suas fotos para definir a imagem de perfil.",
+          "cameraPermission": "O SafeSignal usa a câmera para tirar sua foto de perfil."
+        }
+      ],
+      [
+        "expo-calendar",
+        {
+          "calendarPermission": "O SafeSignal usa sua agenda para marcar check-ups de saúde."
+        }
+      ]
+    ]
   }
 }
