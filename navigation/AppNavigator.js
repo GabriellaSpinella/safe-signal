@@ -1,12 +1,20 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import CalendarStackNavigator from './CalendarStackNavigator';
 import PlaceholderScreen from '../components/PlaceholderScreen';
 import PerfilScreen from '../screens/PerfilScreen';
+import ProgressoScreen from '../screens/ProgressoScreen';
+import ExerciciosScreen from '../screens/ExerciciosScreen';
+import SplashScreen from '../screens/SplashScreen';
+import BoasVindasScreen from '../screens/BoasVindasScreen';
+import LoginScreen from '../screens/LoginScreen';
+import CadastroScreen from '../screens/CadastroScreen';
 import { colors } from '../theme/theme';
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 const TAB_ICONS = {
   Início: 'home-outline',
@@ -16,7 +24,7 @@ const TAB_ICONS = {
   Perfil: 'person-outline',
 };
 
-export default function AppNavigator() {
+function AbasPrincipais() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -29,10 +37,22 @@ export default function AppNavigator() {
       })}
     >
       <Tab.Screen name="Início">{() => <PlaceholderScreen title="Início" />}</Tab.Screen>
-      <Tab.Screen name="Exercícios">{() => <PlaceholderScreen title="Exercícios" />}</Tab.Screen>
+      <Tab.Screen name="Exercícios" component={ExerciciosScreen} />
       <Tab.Screen name="Calendário" component={CalendarStackNavigator} />
-      <Tab.Screen name="Progresso">{() => <PlaceholderScreen title="Progresso" />}</Tab.Screen>
+      <Tab.Screen name="Progresso" component={ProgressoScreen} />
       <Tab.Screen name="Perfil" component={PerfilScreen} />
     </Tab.Navigator>
+  );
+}
+
+export default function AppNavigator() {
+  return (
+    <Stack.Navigator initialRouteName="Splash" screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Splash" component={SplashScreen} />
+      <Stack.Screen name="BoasVindas" component={BoasVindasScreen} />
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Cadastro" component={CadastroScreen} />
+      <Stack.Screen name="Principal" component={AbasPrincipais} />
+    </Stack.Navigator>
   );
 }

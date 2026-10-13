@@ -1,0 +1,15 @@
+export const cores = {
+  verde: '#0F6B35',
+  verdeEscuro: '#0B5A2C',
+  verdeClaro: '#E4F2E8',
+  verdeTexto: '#2E7D4F',
+  verdeBorda: '#BFD9C8',
+  texto: '#1E2723',
+  textoSuave: '#5B6760',
+  borda: '#DDE5DF',
+  fundoTela: '#FCFCFC',
+  branco: '#FFFFFF',
+  erro: '#C0392B',
+  dourado: '#E8B21C',
+  amarelo: '#F4B63A',
+};
