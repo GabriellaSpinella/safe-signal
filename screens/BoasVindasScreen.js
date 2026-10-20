@@ -12,8 +12,6 @@ export default function BoasVindasScreen({ navigation }) {
   const larguraImagem = width - 48;
   const alturaImagem = larguraImagem * (370 / 600);
 
-  const irParaLogin = () => navigation.navigate('Login');
-
   return (
     <ScrollView
       style={{ flex: 1, backgroundColor: cores.fundoTela }}
@@ -45,7 +43,7 @@ export default function BoasVindasScreen({ navigation }) {
       />
 
       <View style={s.botoes}>
-        <Botao titulo="Entrar" onPress={irParaLogin} />
+        <Botao titulo="Entrar" onPress={() => navigation.navigate('Login')} />
 
         <View style={s.divisor}>
           <View style={s.linha} />
@@ -53,7 +51,11 @@ export default function BoasVindasScreen({ navigation }) {
           <View style={s.linha} />
         </View>
 
-        <Botao titulo="Cadastrar-se" variante="contorno" onPress={irParaLogin} />
+        <Botao
+          titulo="Cadastrar-se"
+          variante="contorno"
+          onPress={() => navigation.navigate('Cadastro')}
+        />
       </View>
     </ScrollView>
   );

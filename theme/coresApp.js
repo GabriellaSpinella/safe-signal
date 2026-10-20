@@ -2,6 +2,7 @@ export const cores = {
   verde: '#0F6B35',
   verdeEscuro: '#0B5A2C',
   verdeClaro: '#E4F2E8',
+  verdeCard: '#EAF5EF',
   verdeTexto: '#2E7D4F',
   verdeBorda: '#BFD9C8',
   texto: '#1E2723',

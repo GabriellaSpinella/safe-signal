@@ -3,10 +3,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 import CalendarStackNavigator from './CalendarStackNavigator';
-import PlaceholderScreen from '../components/PlaceholderScreen';
-import PerfilScreen from '../screens/PerfilScreen';
-import ProgressoScreen from '../screens/ProgressoScreen';
+import InicioScreen from '../screens/InicioScreen';
 import ExerciciosScreen from '../screens/ExerciciosScreen';
+import ProgressoScreen from '../screens/ProgressoScreen';
+import PerfilScreen from '../screens/PerfilScreen';
 import SplashScreen from '../screens/SplashScreen';
 import BoasVindasScreen from '../screens/BoasVindasScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -36,7 +36,7 @@ function AbasPrincipais() {
         ),
       })}
     >
-      <Tab.Screen name="Início">{() => <PlaceholderScreen title="Início" />}</Tab.Screen>
+      <Tab.Screen name="Início" component={InicioScreen} />
       <Tab.Screen name="Exercícios" component={ExerciciosScreen} />
       <Tab.Screen name="Calendário" component={CalendarStackNavigator} />
       <Tab.Screen name="Progresso" component={ProgressoScreen} />
